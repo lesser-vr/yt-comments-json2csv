@@ -10,7 +10,7 @@ comments_flattened = []
 def flatten_comments(comments):
     for comment in comments:
         comment_info = {
-            'author_and_id': f"{comment['author'][1:]}@{comment['author_id'][:5]}",
+            'author_and_id': f"{comment['author'][1:]}@{comment['author_id'][-5:]}",
             'comment_id': comment['id'],
             'text': comment['text'],
             'likes': comment.get('likes', 0),
